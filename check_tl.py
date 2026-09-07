@@ -97,7 +97,7 @@ def main():
         return
 
     new_articles = articles[:1]
-    ]
+
 
     # 新着記事を古い順に通知
     for article in reversed(new_articles):
