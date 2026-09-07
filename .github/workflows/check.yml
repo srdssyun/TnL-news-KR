@@ -24,8 +24,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          python -m playwright install --with-
-          
+          python -m playwright install --with-deps chromium
+
       - name: Check TL news
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
