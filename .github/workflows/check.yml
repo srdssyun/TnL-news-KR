@@ -24,15 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          python -m playwright install --with-deps
-
-      - name: Test Discord
-        env:
-         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: |
-         curl -H "Content-Type: application/json" \
-          -d '{"content":"テスト"}' \
-           "$DISCORD_WEBHOOK_URL"
+          python -m playwright install --with-
           
       - name: Check TL news
         env:
