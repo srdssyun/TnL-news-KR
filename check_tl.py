@@ -26,7 +26,7 @@ def get_articles():
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
-        page.goto(URL, wait_until="networkidle", timeout=60000)
+        page.goto(URL, wait_until="domcontentloaded", timeout=60000)
         page.wait_for_timeout(3000)
 
         links = page.locator('a[href*="/board/notice/view?articleId="]')
