@@ -96,7 +96,11 @@ def main():
         print("初回登録完了。既存記事は通知しません。")
         return
 
-    new_articles = articles[:1]
+    new_articles = [
+    article
+    for article in articles
+    if article["url"] not in old_urls
+]
 
 
     # 新着記事を古い順に通知
