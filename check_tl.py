@@ -3,7 +3,7 @@ import json
 import requests
 from playwright.sync_api import sync_playwright
 
-URL = "https://tl.plaync.com/en-sg/board/notice/list"
+URL = "https://tl.plaync.com/en-sg/board/update/list"
 WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"]
 STATE_FILE = "state.json"
 
@@ -29,7 +29,7 @@ def get_articles():
         page.goto(URL, wait_until="domcontentloaded", timeout=60000)
         page.wait_for_timeout(3000)
 
-        links = page.locator('a[href*="/board/notice/view?articleId="]')
+        links = page.locator('a[href*="/board/update/view?articleId="]')
 
         articles = []
 
