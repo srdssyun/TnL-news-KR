@@ -3,7 +3,7 @@ import json
 import requests
 from playwright.sync_api import sync_playwright
 
-URL = "https://tl.plaync.com/en-sg/board/update/list"
+URL = "https://tl.plaync.com/ko-kr/board/update/list"
 WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"]
 STATE_FILE = "state.json"
 
